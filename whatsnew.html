@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <meta property="og:title" content="AdmStorm Plugin (what's new)">
+    <meta property="og:description" content="Add VK internal tools directly to an IDE">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vkcom.github.io/admstorm/whatsnew.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AdmStorm plugin (what's new)">
+    <meta name="twitter:description" content="Add VK internal tools and remote ssh commands directly to an IDE">
+    <meta name="twitter:image:src" content="images/preview.png">
+    <meta name="twitter:image" content="images/preview.png">
+
+    <title>AdmStorm | Что нового</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<header>
+    <div class="header__inner">
+        <a href="index.html" class="header__title inner-link">AdmStorm</a>
+        <nav class="header__navbar">
+            <ul class="header__links">
+                <li>
+                    <a class="inner-link" href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a class="inner-link" href="#">Что нового</a>
+                </li>
+                <li>
+                    <a class="inner-link" href="install.html">Установка</a>
+                </li>
+                <li>
+                    <a class="inner-link" href="faq.html">FAQ</a>
+                </li>
+                <li class="header__github-link">
+                    <a href="https://github.com/VKCOM/admstorm" target="_blank">Github</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="chapter no-top-padding titled-block-text-layout">
+    <div class="chapter_inner">
+        <div class="chapter__block">
+            <div class="chapter__version-block">
+                <h2 class="chapter__big-title chapter__big-title--bold">
+                    Версия v1.3.2
+                </h2>
+
+                <time datetime="2022-06-29">31 августа 2022</time>
+
+                <p class="chapter__text chapter__version-text">
+                    Минорное обновление с фиксами.
+                </p>
+
+                <div class="chapter__version-block-new chapter__version-block-new-features">
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Исправлено
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Исправлено исключение при запуске
+                                    <code class="chapter__code-block__inline">git pull</code> из IDE в версии 2022.2.1.
+                                </li>
+                                <li>
+                                    Исправлены API тесты для PHPUnit.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter__version-block">
+                <h2 class="chapter__big-title chapter__big-title--bold">
+                    Версия v1.3.1
+                </h2>
+
+                <time datetime="2022-06-29">29 июня 2022</time>
+
+                <p class="chapter__text chapter__version-text">
+                    Консоль для просмотра debug логов прямо в IDE, небольшие улучшения, а также большое количество
+                    исправлений.
+                </p>
+
+                <div class="chapter__version-block-new chapter__version-block-new-features">
+
+                    <div class="chapter__version-block-new-feature">
+                        <h2 class="chapter__version-block-new-feature__title">
+                            Консоль для просмотра debug логов прямо в IDE
+                        </h2>
+
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column">
+                            <p class="chapter__text">
+                                В прошлом обновлении мы добавили поддержку
+                                <code class="chapter__code-block__inline">yarn watch</code>
+                                в виде виджета на панели снизу.
+                                Теперь рядом с ним добавился виджет для просмотра debug логов.
+
+                                <br>
+                                <br>
+
+                                Больше не нужно заходить отдельно на сервер, чтобы посмотреть логи, они будут
+                                отображаться прямо в IDE.
+
+                                <br>
+                                <br>
+
+                                Виджет всегда можно отключить в настройках
+                                <span class="chapter__menupath">Tools | AdmStorm</span>..
+                            </p>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" class="js-security-image"
+                                     src="https://kphp.dev/admstorm/images/watch_debug_log.png">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Другие улучшения
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Теперь тесты PHPUnit можно запускать из контекстного меню файла.
+                                </li>
+                                <li>
+                                    Теперь ktest бенчмарки можно запускать из контекстного меню файла.
+                                </li>
+                                <li>
+                                    На странице установки уточнён момент про открытие проекта.
+                                </li>
+                                <li>
+                                    На странице установки обновлён пункт про Yubikey, а также добавлено уточнение про
+                                    страницу настроек.
+                                </li>
+                                <li>
+                                    Добавлены настройки для включения/отключения виджетов инструментов.
+                                </li>
+                                <li>
+                                    Обновлены тесты API.
+                                </li>
+                                <li>
+                                    Добавлено уведомление о наличии новой версии плагина.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Исправлено
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Исправлено зависание во время запуска PHPUnit теста или ktest бенчмарка.
+                                </li>
+                                <li>
+                                    Исправлено зависание когда потеряно подключение при запуске
+                                    <code class="chapter__code-block__inline">yarn watch</code>.
+                                </li>
+                                <li>
+                                    Исправлен запуск отдельного метода бенчмарка, теперь если запускается метод с
+                                    именем,
+                                    которое является также префиксом для имени других методов, то другие методы
+                                    не будут запущены.
+                                </li>
+                                <li>
+                                    Исправлено исключение, когда плагин автоматически открывает новый SSH туннель.
+                                </li>
+                                <li>
+                                    Исправлено предупреждение о производительности для line marker для ktest.
+                                </li>
+                                <li>
+                                    <code class="chapter__code-block__inline">yarn watch</code> теперь не появляется
+                                    в не vkcom проектах.
+                                </li>
+                                <li>
+                                    Исправлен порядок следования аргументов для новых api тестов.
+                                </li>
+                                <li>
+                                    Исправлено название сервера на странице настройки плагина на верный вариант
+                                    Dev-server.
+                                </li>
+                                <li>
+                                    Исправлен баг, когда при потере соединения
+                                    при запуске <code class="chapter__code-block__inline">yarn watch</code>
+                                    плагин считал инструмент запущенными.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter__version-block">
+                <h2 class="chapter__big-title chapter__big-title--bold">
+                    Версия v1.3.0
+                </h2>
+
+                <time datetime="2022-06-22">22 июня 2022</time>
+
+                <p class="chapter__text chapter__version-text">
+                    Бенчмарки для KPHP, поддержка <code class="chapter__action__inline">yarn watch</code>,
+                    деплой тестовых доменов, обновления в KPHP Playground, подсветка Jira тикетов в коде и другие
+                    улучшения, а также исправления багов.
+                </p>
+
+                <div class="chapter__version-block-new chapter__version-block-new-features">
+
+                    <div class="chapter__version-block-new-feature">
+                        <h2 class="chapter__version-block-new-feature__title">Полная поддержка бенчмарков KPHP</h2>
+
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column">
+                            <p class="chapter__text">
+                                Не так давно на всех серверах разработки был добавлен инструмент
+                                <code class="chapter__action__inline">ktest</code>,
+                                который позволяет удобно запускать бенчмарки для KPHP, сравнивать KPHP и PHP,
+                                а также бенчмаркать количество аллокаций памяти для KPHP.
+
+                                <br>
+                                <br>
+
+                                <code class="chapter__action__inline">ktest</code>
+                                также позволяет сравнивать два отдельных метода или два отдельных класса бенчмарков,
+                                что удобно для проверки предположений.
+
+                                <br>
+                                <br>
+
+                                Теперь этот инструмент доступен прямо из IDE.
+                                Плагин добавляет иконки для быстрого запуска бенчмарка для классов и отдельных методов.
+                                Также в выпадающем меню иконки можно быстро выбрать тип бенчмарка перед его запуском.
+
+                                <br>
+                                <br>
+
+                                Плагин также скажет вам, если вы неправильно назвали бенчмарк или файл.
+                            </p>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" src="https://kphp.dev/admstorm/images/kbench.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner
+                                        chapter__version-block-new-feature__inner--two-column">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Виджет Yarn Watch
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Больше не нужно запускать <code class="chapter__code-block__inline">yarn
+                                    watch</code>
+                                    вручную через консоль и переключаться между IDE и консолью, чтобы проверить не
+                                    было ли ошибок.
+                                    <br>
+                                    <br>
+                                    Виджет своим цветом показывает текущее состояние, если он серый, значит watcher
+                                    не включен, зеленый – все хорошо, watcher работает, мигает красным – была ошибка.
+                                    Благодаря этому вы не пропустите ошибку, если она произойдет.
+                                    <br>
+                                    <br>
+                                    Также плагин теперь понимает, что могли появиться изменения в автосгенерированных
+                                    файлах, поэтому он будет автоматически их синхронизировать с локальным репозиторием.
+                                    <br>
+                                    <br>
+                                    Не нужно также заботиться о выключении при переключении ветки, плагин сделает это
+                                    автоматически.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" class="js-security-image"
+                                     src="https://kphp.dev/admstorm/images/yarn_watch.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner
+                                        chapter__version-block-new-feature__inner--two-column">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Обновления в KPHP Playground
+                                </h2>
+
+                                <p class="chapter__text">
+                                    В этой версии мы добавили два небольших дополнения:
+
+                                    <br>
+                                    <br>
+                                    1.
+                                    Теперь можно поделиться кодом из Playground.
+                                    <br>
+                                    <br>
+                                    Плагин создаст новый Hastebin которым можно поделиться
+                                    с другим человеком.
+                                    После этого код по ссылке можно загрузить
+                                    обратно с помощью кнопки вставки.
+
+                                    <br>
+                                    <br>
+                                    2.
+                                    Теперь можно просматривать ход компиляции KPHP уже после
+                                    того, как отобразился вывод.
+                                    <br>
+                                    <br>
+                                    Для этого нужно переключиться на
+                                    вкладку KPHP Compilation.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" class="js-security-image"
+                                     src="https://kphp.dev/admstorm/images/playground-update.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column-narrow">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Deploy Test Domains
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Мы добавили в меню Tool новый пункт
+                                    <code class="chapter__action__inline">Deploy Test Domains</code>, с помощью
+                                    которого теперь можно удобно раскатывать ветки на тестовые домены.
+                                    <br>
+                                    <br>
+                                    Плагин понимает, когда вы выкатываетесь на любой свободный домен и запоминает
+                                    на какой конкретно была выкатка, поэтому в следующий раз, когда вам нужно будет
+                                    обновить выкатку, то достаточно будет выбрать чебокс Last used и нажать на
+                                    кнопку Deploy.
+                                    <br>
+                                    <br>
+                                    В этом же окне можно и освободить нужный вам домен через ссылку под полем Domain.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" src="https://kphp.dev/admstorm/images/test-domains.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column-narrow">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Подсветка Jira тикетов
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Мы добавили подсветку Jira тикетов для комментариев в PHP, JS и CSS.
+                                    Теперь можно быстро открыть таску, на которую ссылается комментарий.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" src="https://kphp.dev/admstorm/images/jira-tickets.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Другие улучшения
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Теперь, когда плагин синхронизирует коммиты, то если коммитов больше 30, то
+                                    он показывает только 30.
+                                    Благодаря этому скорость открытия диалогового окна
+                                    для синхронизации коммитов стала гораздо быстрее даже если коммитов 1000
+                                    (например, после ребейза).
+                                </li>
+                                <li>
+                                    Добавили отправку ошибок в плагине в наш Sentry. Это позволит быстрее реагировать
+                                    на ошибки в плагине.
+                                </li>
+                                <li>
+                                    На странице настроек AdmStorm теперь для полей добавлены комментарии объясняющие
+                                    за что отвечает каждая настройка.
+                                </li>
+                                <li>
+                                    Теперь каждое новое обновление будет показано уведомление с ссылкой на эту страницу.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Исправлено
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Теперь плагин не считает репозиторий
+                                    <code class="chapter__code-block__inline">kphp-polyfills</code> проектом для
+                                    которого
+                                    нужно включить функциональность плагина.
+                                </li>
+                                <li>
+                                    Теперь, когда запускается пуш в стороннем проект, то плагин не будет показывать
+                                    сообщение, что есть проблемы с пушем.
+                                </li>
+                                <li>
+                                    В окошке ввода пароля для сброса Yubikey теперь чекбокс "Remember" по-умолчанию
+                                    включен.
+                                </li>
+                                <li>
+                                    Исправлен запуск некоторых тестов для пакетов.
+                                </li>
+                                <li>
+                                    Исправлен баг, когда при автоматическом открытии SSH туннеля он мог запускаться
+                                    несколько раз.
+                                </li>
+                                <li>
+                                    Исправлен OpenSC путь для Linux. Теперь на Linux будет работать автоматический сбор
+                                    Yubikey.
+                                </li>
+                                <li>
+                                    Исправлен баг, когда пароль от Yubikey не сохранялся даже если поставлена галочка
+                                    "Remember".
+                                </li>
+                                <li>
+                                    Исправлен баг, когда для debug log изменение size не обновляло ссылку на которую
+                                    ведет gutter иконка.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter__version-block">
+                <h2 class="chapter__big-title chapter__big-title--bold">
+                    Версия v1.2.0
+                </h2>
+
+                <time datetime="2022-05-11">11 мая 2022</time>
+
+                <p class="chapter__text chapter__version-text">
+                    Отладка для PHP скриптов и PHPUnit тестов прямо в IDE, новое действие "Run Anything on Server",
+                    поддержка новых API тестов, автоматический импорт классов при создании KPHP Playground из кода
+                    и исправления ошибок.
+                    <br>
+                    <br>
+                    <i>Требует PhpStorm версии 2022.1 или выше.</i>
+                </p>
+
+                <div class="chapter__version-block-new chapter__version-block-new-features">
+
+                    <div class="chapter__version-block-new-feature">
+                        <h2 class="chapter__version-block-new-feature__title">Отладка PHP скриптов и тестов</h2>
+
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column">
+                            <p class="chapter__text">
+                                Одна из главных возможностей IDE — удобно отлаживать код. До текущего
+                                момента запускать отладку PHP скриптов приходилось через консоль.
+                                <br>
+                                <br>
+                                Однако теперь отладка доступна прямо в IDE через ее встроенные возможности!
+                                <br>
+                                <br>
+                                Для того, чтобы все точно заработало, обратитесь к документации по настройке дебаггера
+                                в PHPStorm в нашем Confluence.
+                                <br>
+                                <br>
+                                Обратите внимание на необходимость файла
+                                <code>~/.php_debug</code> и поднятого SSH туннеля.
+                                <br>
+                                <br>
+                                Если вы вдруг забудете открыть туннель, то плагин покажет уведомление где вы сможете
+                                запустить его в
+                                одно действие.
+                            </p>
+
+                            <div class="chapter__text-image-block-image">
+                                <img src="https://kphp.dev/admstorm/images/debug-php.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Действие Run Anything on Server
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Представьте, что вам нужно запустить какую-то команду на сервере и посмотреть
+                                    результат ее выполнения. Нужно переключаться на терминал и набирать там команду.
+                                    Это не удобно, поэтому мы добавили новое действие, которое позволяет быстро
+                                    выполнить любую команду, не выходя из IDE.
+                                    <br>
+                                    <br>
+                                    Для её запуска нажмите <span
+                                        class="chapter__action__inline">⇧⌘W (Shift+Cmd+W)</span>,
+                                    в IDE появится всплывающее окно в котором можно написать команду.
+                                    <br>
+                                    <br>
+                                    Более того, из этой команды вы можете быстро создать конфигурацию запуска, если
+                                    она вам часто нужно.
+                                    <br>
+                                    <br>
+                                    Вы также можете найти это действие во вкладке
+                                    <span class="chapter__action__inline">Tool | Run Anything on Server</span>.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" class="js-security-image"
+                                     src="https://kphp.dev/admstorm/images/run-anything.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column-narrow">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Автоимпорт классов при создании KPHP Playground из выделенного кода
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Обычно, когда вы хотите посмотреть на результаты работы кода в KPHP, вы хотите
+                                    исполнить кусок кода в котором могут использоваться классы или статические методы.
+                                    <br>
+                                    <br>
+                                    Раньше приходилось импортировать классы вручную, однако теперь это будет происходить
+                                    автоматически.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img src="https://kphp.dev/admstorm/images/auto-import-kphp-playground.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column-narrow">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Переход к логам у вызова функции
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Теперь у некоторых функций для дебажных логов появилась иконка в местах их вызовов.
+                                    Через нее можно быстро перейти к просмотру логов на сайте.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" class="js-security-image"
+                                     src="https://kphp.dev/admstorm/images/debug-log.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Исправлено
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Исправлены случаи, когда неправильно обрабатывались ошибки при git pull.
+                                </li>
+                                <li>
+                                    Исправлен баг, когда при первом запуске теста для класса через иконку рядом с
+                                    классом, запускался тест для метода, для которого уже была конфигурация запуска.
+                                </li>
+                                <li>
+                                    Исправлено исключение, когда PhpStorm не может получить текст из бинарного файла.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter__version-block">
+                <h2 class="chapter__big-title chapter__big-title--bold">
+                    Версия v1.1.0
+                </h2>
+
+                <time datetime="2022-02-21">21 февраля 2022</time>
+
+                <p class="chapter__text chapter__version-text">
+                    Обновленный KPHP Playground, автоматическая перезагрузка Yubikey при проблемах подключения,
+                    автоматический пуш на <span class="server-name"></span> после создания коммита, генерация билдеров
+                    прямо в IDE, новые возможности синхронизации автосгенерированных файлов и другие небольшие улучшения
+                    и исправления.
+                </p>
+
+                <div class="chapter__version-block-new chapter__version-block-new-features">
+
+                    <div class="chapter__version-block-new-feature">
+                        <h2 class="chapter__version-block-new-feature__title">Обновленный KPHP Playground</h2>
+
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column">
+                            <p class="chapter__text">
+                                Мы прислушались к вашим пожеланиям и сделали Playground независимым от файлов в
+                                репозитории.
+                                <br>
+                                <br>
+                                Больше не нужно создавать файл, запускать его и удалять, когда вы хотите запушить в
+                                Gitlab.
+                                <br>
+                                <br>
+                                Теперь Playground — это отдельное окно внутри IDE в котором расположены все необходимые
+                                элементы для запуска. В нем же отображаются результаты и ошибки компиляции.
+                                <br>
+                                <br>
+                                Вы можете найти его во вкладке <br>
+                                <span class="chapter__action__inline">Tools | KPHP Playground</span>
+                                <br>
+                                <br>
+                                Когда вы впервые откроете Playground, плагин автоматически сформирует нужные require,
+                                чтобы вы могли использовать любой код VKCOM.
+                            </p>
+
+                            <div class="js-security-video"
+                                 data-src="https://kphp.dev/admstorm/images/playground-1"></div>
+                        </div>
+
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Запуск выделенного блока через контекстное меню
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Представьте, что вам нужно проверить, как отработает уже написанный блок кода,
+                                    нужно его скопировать, открыть Playground и вставить код.
+                                    <br>
+                                    <br>
+                                    Теперь это можно сделать через действие
+                                    <span class="chapter__action__inline">Execute Selected in Playground</span>
+                                    в контекстном меню.
+                                    <br>
+                                    <br>
+                                    Также вы можете запустить выделенный код внутри
+                                    <code class="chapter__code-block__inline">var_dump</code>, чтобы сразу увидеть
+                                    вывод.
+                                    <br>
+                                    <br>
+                                    Плагин самостоятельно удалит точку с запятой в конце, а также все пустые строчки,
+                                    чтобы код был валидным.
+                                </p>
+                            </div>
+
+                            <div class="js-security-video"
+                                 data-src="https://kphp.dev/admstorm/images/playground-2"></div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <h2 class="chapter__version-block-new-feature__title">
+                            Автоматическая перезагрузка Yubikey при проблемах подключения
+                        </h2>
+
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column default-width">
+                            <p class="chapter__text">
+                                Часто ли вы сталкиваетесь с ситуацией, когда выполнение какой-нибудь команды
+                                в плагине заканчивалось тем что плагин показывал уведомление об ошибке подключения и
+                                вам приходилось идти в терминал и самому перезагружать Yubikey?
+                                <br>
+                                <br>
+                                Теперь это больше не понадобится! Во всех уведомлениях о проблемах с подключением
+                                теперь есть действие, которое автоматически перезагрузит Yubikey и переподключится.
+                            </p>
+
+                            <div class="chapter__text-image-block-image">
+                                <img alt="" src="https://kphp.dev/admstorm/images/auto-reset.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <h2 class="chapter__version-block-new-feature__title">
+                            Пуш в Gitlab и на <span class="server-name"></span>
+                        </h2>
+
+                        <div class="chapter__two-block-row">
+                            <div class="chapter__text-image-block">
+                                <div class="chapter__text-image-block-image">
+                                    <img src="https://kphp.dev/admstorm/images/push-button.png" alt="">
+                                </div>
+                                <div class="chapter__text-image-block-text">
+                                    <h2 class="chapter__small-title">
+                                        Коммит и пуш в Gitlab в окне создания коммита
+                                    </h2>
+
+                                    <p class="chapter__text">
+                                        Отправляйте новый коммит сразу в Gitlab, плагин создаст коммит и отправит его
+                                        в Gitlab через <span class="server-name"></span>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="chapter__text-image-block">
+                                <div class="chapter__text-image-block-image">
+                                    <img src="https://kphp.dev/admstorm/images/auto-push.png" alt="">
+                                </div>
+                                <div class="chapter__text-image-block-text">
+                                    <h2 class="chapter__small-title">
+                                        Автоматический пуш на <span class="server-name"></span> после коммита
+                                    </h2>
+
+                                    <p class="chapter__text">
+                                        Не задумывайтесь о ручной синхронизации, теперь по-умолчанию, когда
+                                        вы создаете новый коммит, плагин автоматически синхронизирует его с
+                                        <span class="server-name"></span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner
+                                    chapter__version-block-new-feature__inner--two-column-narrow">
+                            <div>
+                                <h2 class="chapter__version-block-new-feature__small-title">
+                                    Работа с билдерами
+                                </h2>
+
+                                <p class="chapter__text">
+                                    Теперь вы можете легко создать конфигурацию и запускать генерацию билдеров прямо в
+                                    IDE.
+                                    <br>
+                                    <br>
+                                    Плагин знает, что после генерации могут поменяться файлы, поэтому он автоматически
+                                    выкачает измененные автосгенерированные файлы и покажет краткую статистику.
+                                    <br>
+                                    <br>
+                                    Обратите внимание, что если автосгенерированный файл был удален на
+                                    <span class="server-name"></span> в результате генерации, то он также будет удален
+                                    и локально.
+                                </p>
+                            </div>
+
+                            <div class="chapter__text-image-block-image">
+                                <img src="https://kphp.dev/admstorm/images/builders.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Другие улучшения
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Теперь если есть выделение, Hastebin будет создан только из него.
+                                </li>
+                                <li>
+                                    Добавлено новое действие
+                                    <span class="chapter__action__inline">Sync Autogenerated Files</span> в меню
+                                    <span class="chapter__action__inline">
+                                        Tool | <span class="server-name"></span>
+                                    </span>,
+                                    которое позволяет легко синхронизировать автосгенерированные файлы после выполнения
+                                    какой-либо команды на <span class="server-name"></span>. Обратите внимание, если
+                                    файл был удален на
+                                    <span class="server-name"></span>, то он будет удален и локально.
+                                </li>
+                                <li>
+                                    Улучшено диалоговое окно для синхронизации файлов.
+                                    <ul>
+                                        <li>
+                                            Теперь файлы выводятся в отсортированном (по состоянию) виде.
+                                        </li>
+                                        <li>
+                                            Для файлов, которые находятся только в локальном репозитории, добавлена
+                                            возможность удалить их.
+                                        </li>
+                                        <li>
+                                            Теперь полный путь к файлу отображается, начиная с
+                                            <code class="chapter__code-block__inline">~/</code>.
+                                        </li>
+                                        <li>
+                                            Теперь после нажатия кнопки загрузки файла с
+                                            <span class="server-name"></span> она будет начата сразу, а не после
+                                            закрытия диалогового окна.
+                                        </li>
+                                        <li>
+                                            Теперь если файл находиться только локально или только на
+                                            <span class="server-name"></span>
+                                            при просмотре его содержимого оно будет выводиться в простом просмотрщике,
+                                            а не в diff просмотрщике с двумя редакторами.
+                                        </li>
+                                        <li>
+                                            Исправлен баг, когда при удалении файла из списка, фокус не переходил
+                                            на следующий и необходимо было выбирать файл вручную.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="chapter__version-block-new-feature">
+                        <div class="chapter__version-block-new-feature__inner">
+                            <h2 class="chapter__version-block-new-feature__title">
+                                Исправлено
+                            </h2>
+
+                            <ul>
+                                <li>
+                                    Исправлено возникновение исключения
+                                    <code class="chapter__code-block__inline">AlreadyDisposedException</code>
+                                    при закрытии проекта и открытии других проектов. Также благодаря этому
+                                    теперь при переключении проектов не ломается проверка синхронизации при
+                                    фокусировании на IDE.
+                                </li>
+                                <li>
+                                    Исправлен баг со слешами во время синхронизации файлов на Windows.
+                                </li>
+                                <li>
+                                    Исправлен баг, когда во время выполнения KPHP закрытие одной вкладки приводило
+                                    к закрытию другой.
+                                </li>
+                                <li>
+                                    Исправлен баг, когда при запуске PHPUnit через иконку около метода или класса,
+                                    создавалась дублирующая конфигурация запуска для уже существующей.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="chapter__version-block">
+                <h2 class="chapter__big-title chapter__big-title--bold">
+                    Версия v1.0.0
+                </h2>
+                <p class="chapter__text chapter__version-text">
+                    Это первая стабильная версия плагина.
+                </p>
+                <div class="chapter__version-block-new chapter__version-block-new-features">
+                    <h3>Возможности</h3>
+                    <ul>
+                        <li>Проверка синхронизированности локального репозитория и репозитория на <span
+                                class="server-name"></span></li>
+                        <li>Дополнительные действия для пуша и пула с учётом хуков на <span class="server-name"></span>
+                        </li>
+                        <li>Различные конфигурации запуска KPHP</li>
+                        <li>Конфигурации запуска PHPUnit и PHPLinter</li>
+                        <li>Встроенный KPHP Playground и Hastebin</li>
+                        <li>Возможность просматривать сгенерированный С++ код всего сайта</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer__inner">
+        <div class="footer__menu">
+            <h3>
+                Ссылки
+            </h3>
+            <ul>
+                <li>
+                    <a class="inner-link" href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a class="inner-link" href="whatsnew.html">Что нового</a>
+                </li>
+                <li>
+                    <a class="inner-link" href="install.html">Установка</a>
+                </li>
+                <li>
+                    <a class="inner-link" href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="https://github.com/VKCOM/admstorm" target="_blank">Github</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__end-line">
+            <div class="footer__copyright">
+                <a href="https://vk.com" target="_blank">vk.com</a> © 2021-2022
+            </div>
+            <div class="footer__code">
+                <img src="https://kphp.dev/admstorm/images/code_with.svg" alt="">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
