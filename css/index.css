@@ -363,11 +363,11 @@ footer .footer__end-line .footer__code img {
   }
 }
 .chapter.dark {
-  background-color: #323236;
+  background-color: #1e1f22;
   color: #fff;
 }
 .chapter.dark .chapter__text {
-  color: #B8BCBE;
+  color: #adadaf;
 }
 .chapter.dark .chapter__external-link {
   color: #4CA6FF;
@@ -396,7 +396,7 @@ footer .footer__end-line .footer__code img {
   padding-bottom: 0;
 }
 .chapter.light {
-  background-color: #F4F4F4;
+  background-color: #ffffff;
   color: #19191C;
 }
 .chapter.light .chapter__text {
@@ -469,9 +469,10 @@ footer .footer__end-line .footer__code img {
 }
 .chapter .chapter__small-title {
   font-family: "JetBrainsSans", Helvetica, Arial, sans-serif;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   line-height: 1.4;
 }
 .chapter .chapter__tiny_title {
@@ -485,7 +486,8 @@ footer .footer__end-line .footer__code img {
   font-family: "JetBrainsSans", sans-serif;
   font-weight: 350;
   font-size: 19px;
-  line-height: 1.5;
+  color: #adadaf;
+  line-height: 28px;
   margin-bottom: 50px;
 }
 .chapter .chapter__text.padding-top-20 {
@@ -768,7 +770,7 @@ footer .footer__end-line .footer__code img {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 30px;
+  grid-column-gap: 40px;
   grid-row-gap: 30px;
   margin-bottom: 50px;
 }
