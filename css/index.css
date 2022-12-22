@@ -185,14 +185,15 @@ footer .footer__inner a:hover {
 footer .footer__menu ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 50px;
 }
 footer .footer__menu ul li {
   font-size: 12px;
   margin-bottom: 5px;
 }
-footer .footer__menu h3 {
+footer .footer__menu h2 {
   color: #fff;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
 }
 footer .footer__end-line {
@@ -218,7 +219,7 @@ footer .footer__end-line .footer__code img {
 }
 .first-page .first-page__background {
   position: absolute;
-  width: 100vw;
+  width: 99vw;
   height: 1000px;
   overflow: hidden;
 }
@@ -355,6 +356,7 @@ footer .footer__end-line .footer__code img {
 .chapter {
   padding-top: 50px;
   padding-bottom: 50px;
+  overflow-x: hidden;
   position: relative;
 }
 @media only screen and (max-width: 800px) {
@@ -398,6 +400,9 @@ footer .footer__end-line .footer__code img {
 .chapter.light {
   background-color: #ffffff;
   color: #19191C;
+}
+.chapter.light.second-page {
+  background-color: #F4F4F4;
 }
 .chapter.light .chapter__text {
   color: #19191C;
@@ -444,6 +449,7 @@ footer .footer__end-line .footer__code img {
   font-weight: 500;
   letter-spacing: -1px;
   line-height: 1.5;
+  margin-top: 0;
   margin-bottom: 40px;
 }
 .chapter .chapter__big-title.chapter__big-title--bold {
@@ -492,6 +498,9 @@ footer .footer__end-line .footer__code img {
 }
 .chapter .chapter__text.padding-top-20 {
   padding-top: 20px;
+}
+.chapter .chapter__text.margin-bottom-30 {
+  margin-bottom: 35px;
 }
 .chapter .chapter__text.big-text {
   font-size: 29px;
@@ -543,6 +552,22 @@ footer .footer__end-line .footer__code img {
 .chapter .chapter__external-link:hover {
   border-bottom: 1px solid #167DFF;
 }
+.chapter .donate {
+  color: #fff;
+  line-height: 48px;
+  height: 48px;
+  font-size: 13pt;
+  font-weight: 400;
+  background: #0b88f3;
+  padding: 15px 50px;
+  border-radius: 24px;
+  border: none;
+  margin-bottom: 20px;
+}
+.chapter .donate:hover {
+  cursor: pointer;
+  background: #0b7bdc;
+}
 
 .tabs {
   margin-bottom: 30px;
@@ -573,6 +598,15 @@ footer .footer__end-line .footer__code img {
 .chapter.two-column-layout .chapter_inner {
   display: grid;
   grid-template-columns: 30% 70%;
+  grid-column-gap: 40px;
+  padding: 40px 0 40px 0;
+}
+.chapter.two-column-layout .chapter_inner.second-page {
+  grid-column-gap: 0;
+  padding-top: 0;
+}
+.chapter.two-column-layout .chapter_inner.second-page .chapter__image-col img {
+  height: 700px;
 }
 @media only screen and (max-width: 800px) {
   .chapter.two-column-layout .chapter_inner {
@@ -590,10 +624,14 @@ footer .footer__end-line .footer__code img {
   }
 }
 .chapter.two-column-layout .chapter_inner .chapter__image-col img {
+  width: 100%;
+}
+.chapter.two-column-layout .chapter_inner .chapter__image-col img.full-height {
+  width: unset;
   height: 700px;
 }
 .chapter.two-column-layout .chapter_inner .chapter__image-col.with-big-title {
-  margin-top: 30px;
+  margin-top: -20px;
 }
 
 .chapter.three-row-layout .chapter_inner {
