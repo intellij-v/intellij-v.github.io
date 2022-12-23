@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap");
 
+html {
+  --dark-background: #1e1f22;
+}
+
 @font-face {
   font-family: "JetBrainsSans";
   src: url("../fonts/JetBrainsSans-Regular.woff2");
@@ -175,7 +179,7 @@ header {
 footer {
   min-height: 220px;
   color: #8c8b8b;
-  background-color: #27282C;
+  background-color: var(--dark-background);
 
   display: grid;
 
@@ -304,6 +308,33 @@ footer {
 
     @media only screen and (max-width: 800px) {
       padding-top: 240px;
+      padding-left: 25px;
+    }
+
+    .title-box {
+      width: 120px;
+      height: 120px;
+      background-color: #000;
+      position: absolute;
+      box-sizing: border-box;
+      bottom: -175px;
+      left: -85px;
+      padding: 10px 10px 0 10px;
+      display: grid;
+      align-items: flex-end;
+
+      font-size: 9px;
+      font-weight: 500;
+      color: white;
+
+      h2 {
+        text-align: left;
+      }
+
+      @media only screen and (max-width: 800px) {
+        left: 35px;
+        bottom: -225px;
+      }
     }
   }
 
@@ -342,9 +373,22 @@ footer {
     }
 
     @media only screen and (max-width: 800px) {
-      font-size: 15vw;
+      font-size: 8vw;
       letter-spacing: -1px;
-      margin-bottom: 10px;
+      margin-bottom: -10px;
+      grid-column-gap: 10px;
+
+      .title__beta-tag {
+        font-size: 15px;
+        margin-left: 220px;
+        margin-top: -25px;
+        padding: 5px;
+      }
+
+      .logo svg {
+        margin-top: -10px;
+        width: 50px;
+      }
     }
   }
 
@@ -371,7 +415,7 @@ footer {
     grid-template-rows: max-content max-content;
 
     @media only screen and (max-width: 800px) {
-      margin-top: 15px;
+      margin-top: 25px;
     }
 
     a {
@@ -398,6 +442,7 @@ footer {
 
     @media only screen and (max-width: 800px) {
       padding: 0 30px;
+      font-size: 11pt;
     }
   }
 
@@ -428,7 +473,7 @@ footer {
   }
 
   &.dark {
-    background-color: #1e1f22;
+    background-color: var(--dark-background);
     color: #fff;
 
     .chapter__text {
@@ -494,22 +539,6 @@ footer {
     @media only screen and (max-width: 800px) {
       padding-right: 15px;
       padding-left: 15px;
-    }
-
-    .title-box {
-      width: 120px;
-      height: 120px;
-      background-color: #000;
-      position: absolute;
-      box-sizing: border-box;
-      top: -60px;
-      padding: 10px 10px 0 10px;
-      display: grid;
-      align-items: flex-end;
-
-      font-size: 9px;
-      font-weight: 500;
-      color: white;
     }
   }
 
@@ -717,6 +746,10 @@ footer {
 
 // layouts
 
+.chapter.two-column-layout.reversed .chapter_inner {
+  grid-template-columns: 70% 30%;
+}
+
 .chapter.two-column-layout .chapter_inner {
   display: grid;
   grid-template-columns: 30% 70%;
@@ -738,6 +771,8 @@ footer {
   @media only screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     padding-bottom: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .chapter__image-col {
@@ -835,7 +870,7 @@ footer {
     margin-top: 20px;
 
     @media only screen and (max-width: 800px) {
-      margin-top: 55px;
+      margin-top: 0;
     }
   }
 
