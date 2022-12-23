@@ -303,7 +303,8 @@ footer .footer__end-line .footer__code img {
   letter-spacing: 0;
   color: #000;
   position: absolute;
-  margin-left: 450px;
+  margin-left: 440px;
+  margin-top: -10px;
 }
 .first-page .first-page__title span {
   font-family: "JetBrainsSans", Helvetica, Arial, sans-serif;
@@ -322,6 +323,9 @@ footer .footer__end-line .footer__code img {
     letter-spacing: -1px;
     margin-bottom: -10px;
     grid-column-gap: 10px;
+  }
+  .first-page .first-page__title span {
+    letter-spacing: -3px;
   }
   .first-page .first-page__title .title__beta-tag {
     font-size: 15px;

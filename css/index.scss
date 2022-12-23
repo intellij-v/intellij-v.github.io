@@ -356,7 +356,8 @@ footer {
       letter-spacing: 0;
       color: #000;
       position: absolute;
-      margin-left: 450px;
+      margin-left: 440px;
+      margin-top: -10px;
     }
 
     span {
@@ -377,6 +378,10 @@ footer {
       letter-spacing: -1px;
       margin-bottom: -10px;
       grid-column-gap: 10px;
+
+      span {
+        letter-spacing: -3px;
+      }
 
       .title__beta-tag {
         font-size: 15px;
