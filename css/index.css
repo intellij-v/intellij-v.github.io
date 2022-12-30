@@ -242,6 +242,7 @@ footer .footer__end-line .footer__code img {
   .first-page .first-page__background .beam {
     top: 151px;
     transform: scale(1.2);
+    z-index: -1;
   }
 }
 .first-page .first-page__inner {
@@ -282,7 +283,7 @@ footer .footer__end-line .footer__code img {
 }
 @media only screen and (max-width: 800px) {
   .first-page .first-page__inner .title-box {
-    left: 35px;
+    left: 15px;
     bottom: -225px;
   }
 }
@@ -407,6 +408,7 @@ footer .footer__end-line .footer__code img {
 @media only screen and (max-width: 800px) {
   .chapter {
     min-height: 0;
+    padding-bottom: 0;
   }
 }
 .chapter.dark {
@@ -452,6 +454,10 @@ footer .footer__end-line .footer__code img {
 .chapter.light .chapter__text {
   color: #19191C;
 }
+.chapter.purple {
+  background-color: #6059f7;
+  color: #fff;
+}
 .chapter .chapter_inner {
   max-width: min(1200px, 100vw);
   margin-right: auto;
@@ -485,6 +491,24 @@ footer .footer__end-line .footer__code img {
 }
 .chapter .chapter__big-title.chapter__big-title--bold {
   font-weight: 700;
+}
+.chapter .chapter__big-title.with-icon {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+.chapter .chapter__big-title.with-icon svg {
+  margin-top: 4px;
+}
+@media only screen and (max-width: 800px) {
+  .chapter .chapter__big-title.with-icon {
+    grid-template-columns: auto;
+    justify-items: center;
+    font-size: 30px;
+  }
+  .chapter .chapter__big-title.with-icon svg {
+    display: none;
+  }
 }
 .chapter .chapter__middle-big-title {
   font-size: 33px;
@@ -629,6 +653,11 @@ footer .footer__end-line .footer__code img {
 .chapter.two-column-layout.reversed .chapter_inner {
   grid-template-columns: 70% 30%;
 }
+@media only screen and (max-width: 800px) {
+  .chapter.two-column-layout.reversed .chapter_inner {
+    grid-template-columns: 1fr;
+  }
+}
 
 .chapter.two-column-layout .chapter_inner {
   display: grid;
@@ -646,7 +675,6 @@ footer .footer__end-line .footer__code img {
 @media only screen and (max-width: 800px) {
   .chapter.two-column-layout .chapter_inner {
     grid-template-columns: 1fr;
-    padding-bottom: 50px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -738,6 +766,16 @@ footer .footer__end-line .footer__code img {
 }
 .chapter.titled-block-text-layout .chapter__block {
   margin-bottom: 70px;
+}
+
+.chapter.banner .chapter_inner {
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 800px) {
+  .chapter.banner .chapter_inner {
+    padding-bottom: 45px;
+  }
 }
 
 .chapter__two-column-block {

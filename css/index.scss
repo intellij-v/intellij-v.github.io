@@ -287,6 +287,7 @@ footer {
       @media only screen and (max-width: 800px) {
         top: 151px;
         transform: scale(1.2);
+        z-index: -1;
       }
     }
   }
@@ -332,7 +333,7 @@ footer {
       }
 
       @media only screen and (max-width: 800px) {
-        left: 35px;
+        left: 15px;
         bottom: -225px;
       }
     }
@@ -475,6 +476,7 @@ footer {
 
   @media only screen and (max-width: 800px) {
     min-height: 0;
+    padding-bottom: 0;
   }
 
   &.dark {
@@ -533,6 +535,11 @@ footer {
     }
   }
 
+  &.purple {
+    background-color: #6059f7;
+    color: #fff;
+  }
+
   .chapter_inner {
     max-width: min(1200px, 100vw);
 
@@ -575,6 +582,26 @@ footer {
 
     &.chapter__big-title--bold {
       font-weight: 700;
+    }
+
+    &.with-icon {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+
+      svg {
+        margin-top: 4px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        grid-template-columns: auto;
+        justify-items: center;
+        font-size: 30px;
+
+        svg {
+          display: none;
+        }
+      }
     }
   }
 
@@ -753,6 +780,10 @@ footer {
 
 .chapter.two-column-layout.reversed .chapter_inner {
   grid-template-columns: 70% 30%;
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .chapter.two-column-layout .chapter_inner {
@@ -775,7 +806,6 @@ footer {
 
   @media only screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    padding-bottom: 50px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -891,6 +921,15 @@ footer {
 
   .chapter__block {
     margin-bottom: 70px;
+  }
+}
+
+.chapter.banner .chapter_inner {
+  padding-top: 35px;
+  padding-bottom: 10px;
+
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 45px;
   }
 }
 
