@@ -1,0 +1,20 @@
+{
+  "name": "intellij-v-site",
+  "version": "1.0.0",
+  "description": "IntelliJ V Site",
+  "scripts": {
+    "sass-watch": "sass --watch --source-map ./css/index.scss:./css/index.css"
+  },
+  "author": {
+    "name": "V Open Source Community Association (VOSCA)",
+    "url": "https://vosca.dev/"
+  },
+  "contributors": [
+    "Petr Makhnev",
+    "Mark @walkingdevel"
+  ],
+  "bugs": {
+    "url": "https://github.com/vlang-association/vosca.dev/issues"
+  },
+  "homepage": "https://vosca.dev/"
+}
