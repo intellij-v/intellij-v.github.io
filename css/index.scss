@@ -2,54 +2,60 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap");
 
+@import "fonts";
+@import "colors";
+@import "header";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   --dark-background: #1e1f22;
-}
 
-@font-face {
-  font-family: "JetBrainsSans";
-  src: url("../fonts/JetBrainsSans-Regular.woff2");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "JetBrainsSans";
-  src: url("../fonts/JetBrainsSans-Bold.woff2");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "JetBrainsSans";
-  src: url("../fonts/JetBrainsSans-SemiBold.woff2");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "JetBrainsSans";
-  src: url("../fonts/JetBrainsSans-Medium.woff2");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "JetBrainsSans";
-  src: url("../fonts/JetBrainsSans-Book.woff2");
-  font-weight: 350;
-}
-
-@font-face {
-  font-family: "JetBrainsSans";
-  src: url("../fonts/JetBrainsSans-ExtraLight.woff2");
-  font-weight: 300;
+  --max-width: 1400px;
 }
 
 body {
-  margin: 56px 0 0 0;
+  margin: 0 0 0 0;
   padding: 0;
 
   font: 400 16px/1.5 "JetBrainsSans", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
   font-feature-settings: "kern" 1;
   color: #19191C;
+}
+
+.header-component {
+  color: var(--text-color);
+
+  header {
+    .header-container {
+      max-width: min(var(--max-width), 100vw);
+      margin: 0 auto;
+    }
+
+    .sub-menu {
+      z-index: 100;
+    }
+  }
+}
+
+footer {
+  color: var(--text-color);
+  padding: 0;
+
+  .footer-container {
+    max-width: min(var(--max-width), 100vw);
+    margin: 0 auto;
+    padding: 50px 50px 80px;
+
+    @media only screen and (max-width: 600px) {
+      padding: 50px 15px 80px;
+    }
+  }
 }
 
 a {
@@ -82,21 +88,21 @@ a {
   }
 }
 
-header {
+.sub-header {
   min-height: 70px;
   border-bottom: 1px solid #cccbcb;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 99;
   background-color: #fff;
 
   display: grid;
   align-content: center;
 
   .header__inner {
-    min-width: min(1200px, calc(100vw - 100px));
+    min-width: min(var(--max-width), 100vw);
     padding-right: 50px;
     padding-left: 50px;
 
@@ -110,7 +116,7 @@ header {
 
     @media only screen and (max-width: 600px) {
       padding: 0 15px;
-      grid-template-columns: auto;
+      grid-template-columns: auto max-content;
     }
 
     .header__github-link {
@@ -133,17 +139,43 @@ header {
     @media only screen and (max-width: 600px) {
       font-size: 25px;
       line-height: 30px;
-      justify-self: center;
-
-      margin-top: 10px;
+      margin-top: 4px;
     }
   }
 
   .header__navbar {
+    display: grid;
     justify-self: end;
 
     @media only screen and (max-width: 600px) {
       justify-self: center;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 15px;
+
+      align-self: center;
+
+      a {
+        margin-top: 5px;
+        line-height: 1;
+
+        svg {
+          width: 20px;
+        }
+
+        path {
+          fill: var(--almost-black);
+        }
+
+        &:hover {
+          path {
+            fill: #167DFF;
+          }
+        }
+      }
     }
 
     .header__links {
@@ -171,81 +203,6 @@ header {
           margin-left: 5px;
           margin-right: 5px;
         }
-      }
-    }
-  }
-}
-
-footer {
-  min-height: 220px;
-  color: #8c8b8b;
-  background-color: var(--dark-background);
-
-  display: grid;
-
-  padding: 50px 0 10px;
-
-  .footer__inner {
-    min-width: min(1200px, calc(100vw - 100px));
-    padding-right: 50px;
-    padding-left: 50px;
-
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-rows: auto 50px;
-
-    position: relative;
-
-    @media only screen and (max-width: 600px) {
-      padding-right: 15px;
-      padding-left: 15px;
-
-      margin: 0;
-    }
-
-    a {
-      color: #8c8b8b;
-
-      &:hover {
-        color: #8c8b8b;
-        border-bottom: solid 1px #8c8b8b;
-      }
-    }
-  }
-
-  .footer__menu {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 50px;
-
-      li {
-        font-size: 12px;
-        margin-bottom: 5px;
-      }
-    }
-
-    h2 {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 700;
-    }
-  }
-
-  .footer__end-line {
-    display: grid;
-    grid-template-columns: auto max-content;
-
-    .footer__copyright {
-      font-size: 12px;
-      line-height: 24px;
-    }
-
-    .footer__code {
-
-      img {
-        width: 110px;
       }
     }
   }
@@ -296,7 +253,7 @@ footer {
     display: grid;
     justify-items: center;
 
-    padding-top: 250px;
+    padding-top: 220px;
 
     max-width: 924px;
     margin-right: auto;
@@ -352,7 +309,7 @@ footer {
       font-size: 18px;
       font-weight: 400;
       padding: 7px;
-      border-radius: 6px;
+      border-radius: 10px;
       border: solid 1px #000;
       letter-spacing: 0;
       color: #000;
@@ -377,7 +334,7 @@ footer {
     @media only screen and (max-width: 800px) {
       font-size: 8vw;
       letter-spacing: -1px;
-      margin-bottom: -10px;
+      margin-bottom: 10px;
       grid-column-gap: 10px;
 
       span {
@@ -477,6 +434,7 @@ footer {
   @media only screen and (max-width: 800px) {
     min-height: 0;
     padding-bottom: 0;
+    padding-top: 30px;
   }
 
   &.dark {
@@ -541,7 +499,7 @@ footer {
   }
 
   .chapter_inner {
-    max-width: min(1200px, 100vw);
+    max-width: min(var(--max-width), 100vw);
 
     margin-right: auto;
     margin-left: auto;
@@ -559,6 +517,10 @@ footer {
 
   .chapter__text-col.top-20 {
     margin-top: 40px;
+
+    @media only screen and (max-width: 800px) {
+      margin-top: 0;
+    }
   }
 
   .chapter__title-description {
@@ -665,6 +627,10 @@ footer {
       margin-bottom: 35px;
     }
 
+    &.width-500 {
+      max-width: 500px;
+    }
+
     &.big-text {
       font-size: 29px;
       font-weight: 300;
@@ -732,7 +698,7 @@ footer {
     font-size: 13pt;
     font-weight: 400;
     background: #0b88f3;
-    padding: 15px 50px;
+    padding: 15px 30px;
     border-radius: 24px;
     border: none;
 
@@ -791,7 +757,7 @@ footer {
   grid-template-columns: 30% 70%;
   grid-column-gap: 40px;
 
-  padding: 40px 0 40px 0;
+  padding: 40px 50px 40px 50px;
 
   &.second-page {
     grid-column-gap: 0;
@@ -808,6 +774,7 @@ footer {
     grid-template-columns: 1fr;
     padding-right: 15px;
     padding-left: 15px;
+    padding-top: 10px;
   }
 
   .chapter__image-col {
